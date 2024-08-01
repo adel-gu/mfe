@@ -43,5 +43,5 @@ jobs:
           aws-region: 'eu-north-1'
 
       - name: Deploy to s3
-        run: aws s3 sync packages/container/dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
+        run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
         working-directory: packages/container
